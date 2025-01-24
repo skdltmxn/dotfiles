@@ -128,6 +128,7 @@ alias ll='la -a'
 alias cd='z'
 alias cat='bat'
 alias c='clear'
+alias grep='rg --color=auto'
 
 # brew (macOS)
 if [[ "$OSTYPE" == "darwin"* ]]; then

@@ -130,6 +130,13 @@ alias cat='bat'
 alias c='clear'
 alias grep='rg --color=auto'
 
+# directory
+alias ..='cd ..'
+alias .2='cd ../..'
+alias .3='cd ../../..'
+alias .4='cd ../../../..'
+alias .5='cd ../../../../..'
+
 # brew (macOS)
 if [[ "$OSTYPE" == "darwin"* ]]; then
   alias b='brew'

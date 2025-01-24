@@ -44,12 +44,13 @@ if [[ "$OSTYPE" == "darwin"* ]]; then
   alias bi='brew install'
 fi
 
-# if has pacman
+# pacman
 if command -v pacman &> /dev/null; then
-  alias p='sudo pacman'
-  alias pu='sudo pacman -Syu'
-  alias pi='sudo pacman -S'
-  alias pd='sudo pacman -Rns'
+  alias pm='sudo pacman'
+  alias pmu='sudo pacman -Syu'
+  alias pmi='sudo pacman -S'
+  alias pms='sudo pacman -Ss'
+  alias pmd='sudo pacman -Rns'
 fi
 
 # git
@@ -65,6 +66,15 @@ alias grst='git reset HEAD~1'
 alias gsq='(){ git rebase -i HEAD~$1 }'
 alias gsm='git submodule'
 alias gsmu='git submodule update --init --recursive'
+
+# pulumi
+alias p='pulumi'
+alias pu='pulumi up --suppress-outputs'
+alias pc='pulumi config'
+alias pst='pulumi stack'
+alias pstt='pulumi state'
+alias ppv='pulumi preview --suppress-outputs'
+alias ppvd='pulumi preview --diff --suppress-outputs'
 
 # editor
 alias vim='nvim'

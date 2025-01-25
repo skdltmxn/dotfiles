@@ -53,6 +53,10 @@ if command -v pacman &> /dev/null; then
   alias pmd='sudo pacman -Rns'
 fi
 
+if command -v aws_completer &> /dev/null; then
+  complete -C $(which aws_completer) aws
+fi
+
 # git
 alias git='LANG=en_US git'
 alias gs='git status'

@@ -1,15 +1,9 @@
-if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
-fi
-
 # Init zinit
 ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
 [ ! -d $ZINIT_HOME ] && mkdir -p "$(dirname $ZINIT_HOME)"
 [ ! -d $ZINIT_HOME/.git ] && git clone https://github.com/zdharma-continuum/zinit.git "$ZINIT_HOME"
 
 source "${ZINIT_HOME}/zinit.zsh"
-
-zinit ice depth=1; zinit light romkatv/powerlevel10k
 
 # plugins
 zinit light zsh-users/zsh-syntax-highlighting
@@ -35,7 +29,7 @@ export EDITOR=nvim
 # common
 alias so='source ~/.zshrc'
 alias ls='eza --color=always --long --git --icons=always --no-time --no-user --no-permissions'
-alias ll='la -a'
+alias ll='ls -a'
 alias cd='z'
 alias cat='bat'
 alias c='clear'
@@ -137,10 +131,10 @@ eval "$(fzf --zsh)"
 # Zoxide
 eval "$(zoxide init zsh)"
 
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-
 # nvm
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
+
+# Oh My Posh
+eval "$(oh-my-posh init zsh)"

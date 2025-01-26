@@ -53,9 +53,20 @@ if command -v pacman &> /dev/null; then
   alias pmd='sudo pacman -Rns'
 fi
 
+# yay
+if command -v yay &> /dev/null; then
+  alias yu='yay -Syu'
+  alias yi='yay -S'
+  alias ys='yay -Ss'
+  alias yd='yay -Rns'
+fi
+
+# aws
 if command -v aws_completer &> /dev/null; then
   complete -C $(which aws_completer) aws
 fi
+
+alias awslg='aws sso login'
 
 # git
 alias git='LANG=en_US git'

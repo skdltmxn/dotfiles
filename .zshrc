@@ -23,11 +23,13 @@ zinit snippet OMZP::command-not-found
 
 autoload -Uz compinit && compinit
 
+zinit cdreplay -q
+
 export LANG=en_US.UTF-8
 export EDITOR=nvim
 
 # common
-alias so='source ~/.zshrc'
+alias so='exec zsh'
 alias ls='eza --color=always --long --git --icons=always --no-time --no-user --no-permissions'
 alias ll='ls -a'
 alias cd='z'
@@ -137,4 +139,5 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
 
 # Oh My Posh
-eval "$(oh-my-posh init zsh)"
+OH_MY_POSH_HOME="${XDG_DATA_HOME:-${HOME}}/.config/oh-my-posh"
+eval "$(oh-my-posh init zsh --config $OH_MY_POSH_HOME/theme.json)"

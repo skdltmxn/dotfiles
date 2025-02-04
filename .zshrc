@@ -108,7 +108,9 @@ SAVEHIST=1000
 HISTSIZE=999
 HISTDUP=erase
 
+bindkey '^[[A' history-search-backward
 bindkey '^p' history-search-backward
+bindkey '^[[B' history-search-forward
 bindkey '^n' history-search-forward
 
 setopt appendhistory

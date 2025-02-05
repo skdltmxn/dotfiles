@@ -9,6 +9,7 @@ source "${ZINIT_HOME}/zinit.zsh"
 zinit light zsh-users/zsh-syntax-highlighting
 zinit light zsh-users/zsh-completions
 zinit light zsh-users/zsh-autosuggestions
+zinit light zsh-users/zsh-history-substring-search
 zinit light Aloxaf/fzf-tab
 
 # snippets
@@ -107,11 +108,12 @@ HISTFILE=$HOME/.zhistory
 SAVEHIST=1000
 HISTSIZE=999
 HISTDUP=erase
+HISTORY_SUBSTRING_SEARCH_HIGHLIGHT_TIMEOUT=0
 
-bindkey '^[[A' history-search-backward
-bindkey '^p' history-search-backward
-bindkey '^[[B' history-search-forward
-bindkey '^n' history-search-forward
+bindkey '^[[A' history-substring-search-up
+bindkey '^p' history-substring-search-up
+bindkey '^[[B' history-substring-search-down
+bindkey '^n' history-substring-search-down
 
 setopt appendhistory
 setopt sharehistory

@@ -145,3 +145,5 @@ export NVM_DIR="$HOME/.nvm"
 # Oh My Posh
 OH_MY_POSH_HOME="${XDG_DATA_HOME:-${HOME}}/.config/oh-my-posh"
 eval "$(oh-my-posh init zsh --config $OH_MY_POSH_HOME/theme.json)"
+
+export PATH="$HOME/go/bin:$PATH"

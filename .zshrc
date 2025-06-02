@@ -46,8 +46,13 @@ alias .3='cd ../../..'
 alias .4='cd ../../../..'
 alias .5='cd ../../../../..'
 
-# brew (macOS)
-if [[ "$OSTYPE" == "darwin"* ]]; then
+# brew (linux)
+if [[ "$OSTYPE" == "linux-gnu" ]]; then
+  eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+fi
+
+# if brew is installed, set up aliases
+if command -v brew &> /dev/null; then
   alias b='brew'
   alias bu='brew upgrade'
   alias bi='brew install'
@@ -75,7 +80,13 @@ if command -v aws_completer &> /dev/null; then
   complete -C $(which aws_completer) aws
 fi
 
+# kubectl
+if command -v kubectl &> /dev/null; then
+  alias k='kubectl'
+fi
+
 alias awslg='aws sso login'
+alias tshlg='tsh login --proxy teleport.pubg.io:443 --auth sso'
 
 # git
 alias git='LANG=en_US git'
@@ -146,5 +157,11 @@ export NVM_DIR="$HOME/.nvm"
 # Oh My Posh
 OH_MY_POSH_HOME="${XDG_DATA_HOME:-${HOME}}/.config/oh-my-posh"
 eval "$(oh-my-posh init zsh --config $OH_MY_POSH_HOME/theme.json)"
+
+for file in $HOME/.config/projects/*.zsh; do
+  if [[ -f $file ]]; then
+    source "$file"
+  fi
+done
 
 export PATH="$HOME/go/bin:/sbin:/usr/sbin:/usr/local/bin:$PATH"

@@ -103,13 +103,20 @@ alias gsm='git submodule'
 alias gsmu='git submodule update --init --recursive'
 
 # pulumi
-alias p='pulumi'
-alias pu='pulumi up --suppress-outputs'
-alias pc='pulumi config'
+alias pl='pulumi'
+alias pup='pulumi up --suppress-outputs'
+alias plc='pulumi config'
 alias pst='pulumi stack'
 alias pstt='pulumi state'
 alias ppv='pulumi preview --suppress-outputs'
 alias ppvd='pulumi preview --diff --suppress-outputs'
+
+# pnpm
+if command -v pnpm &> /dev/null; then
+  alias p='pnpm'
+  alias pd='pnpm dev'
+  alias pr='pnpm run'
+fi
 
 # editor
 alias vim='nvim'
@@ -164,4 +171,4 @@ for file in $HOME/.config/projects/*.zsh; do
   fi
 done
 
-export PATH="$HOME/go/bin:/sbin:/usr/sbin:/usr/local/bin:$PATH"
+export PATH="$HOME/go/bin:/sbin:/usr/sbin:/usr/local/bin:/usr/local/go/bin:$PATH"

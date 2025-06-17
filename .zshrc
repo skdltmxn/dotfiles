@@ -165,10 +165,14 @@ export NVM_DIR="$HOME/.nvm"
 OH_MY_POSH_HOME="${XDG_DATA_HOME:-${HOME}}/.config/oh-my-posh"
 eval "$(oh-my-posh init zsh --config $OH_MY_POSH_HOME/theme.json)"
 
-for file in $HOME/.config/projects/*.zsh; do
-  if [[ -f $file ]]; then
-    source "$file"
-  fi
-done
+# Per-project configs
+(
+    setopt null_glob
+    for file in $HOME/.config/projects/*.zsh; do
+      if [[ -f $file ]]; then
+        source "$file"
+      fi
+    done
+)
 
 export PATH="$HOME/go/bin:/sbin:/usr/sbin:/usr/local/bin:/usr/local/go/bin:$PATH"

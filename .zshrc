@@ -166,13 +166,12 @@ OH_MY_POSH_HOME="${XDG_DATA_HOME:-${HOME}}/.config/oh-my-posh"
 eval "$(oh-my-posh init zsh --config $OH_MY_POSH_HOME/theme.json)"
 
 # Per-project configs
-(
-    setopt null_glob
-    for file in $HOME/.config/projects/*.zsh; do
-      if [[ -f $file ]]; then
+setopt null_glob
+for file in $HOME/.config/projects/*.zsh; do
+    if [[ -f $file ]]; then
         source "$file"
-      fi
-    done
-)
+    fi
+done
+unsetopt null_glob
 
-export PATH="$HOME/go/bin:/sbin:/usr/sbin:/usr/local/bin:/usr/local/go/bin:$PATH"
+export PATH="$HOME/go/bin:$HOME/bin:/sbin:/usr/sbin:/usr/local/bin:/usr/local/go/bin:$PATH"

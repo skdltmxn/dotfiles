@@ -94,6 +94,7 @@ alias gs='git status'
 alias gf='git fetch --prune'
 alias gp='git push'
 alias gr='git rebase'
+alias gpl='git pull'
 alias gpr='git pull --rebase'
 alias gpF='git push -f'
 alias gac='git add -A && git commit -S'
@@ -174,4 +175,4 @@ for file in $HOME/.config/projects/*.zsh; do
 done
 unsetopt null_glob
 
-export PATH="$HOME/go/bin:$HOME/bin:/sbin:/usr/sbin:/usr/local/bin:/usr/local/go/bin:$PATH"
+export PATH="$HOME/.pulumi/bin:$HOME/go/bin:$HOME/bin:/sbin:/usr/sbin:/usr/local/bin:/usr/local/go/bin:$PATH"

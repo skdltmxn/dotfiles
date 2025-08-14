@@ -1,19 +1,18 @@
 return {
-	"CopilotC-Nvim/CopilotChat.nvim",
-	dependencies = {
-		{ "github/copilot.vim" },
-		{ "nvim-lua/plenary.nvim", branch = "master" },
-	},
-	build = "make tiktoken",
-	opts = {},
-	config = function()
-		local chat = require("CopilotChat")
-		local ks = vim.keymap.set
+    "CopilotC-Nvim/CopilotChat.nvim",
+    dependencies = {
+        { "nvim-lua/plenary.nvim", branch = "master" },
+    },
+    build = "make tiktoken",
+    opts = {},
+    config = function()
+        local chat = require("CopilotChat")
+        local ks = vim.keymap.set
 
-		chat.setup()
+        chat.setup()
 
-		ks("n", "<leader>cc", function()
-			chat.open()
-		end)
-	end,
+        ks("n", "<leader>cc", function()
+            chat.open()
+        end)
+    end,
 }

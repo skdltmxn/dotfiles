@@ -175,4 +175,4 @@ for file in $HOME/.config/projects/*.zsh; do
 done
 unsetopt null_glob
 
-export PATH="$HOME/.pulumi/bin:$HOME/go/bin:$HOME/bin:/sbin:/usr/sbin:/usr/local/bin:/usr/local/go/bin:$PATH"
+export PATH="$HOME/.local/bin:$HOME/.pulumi/bin:$HOME/go/bin:$HOME/bin:/sbin:/usr/sbin:/usr/local/bin:/usr/local/go/bin:$PATH"

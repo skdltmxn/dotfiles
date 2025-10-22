@@ -130,10 +130,14 @@ HISTSIZE=999
 HISTDUP=erase
 HISTORY_SUBSTRING_SEARCH_HIGHLIGHT_TIMEOUT=0
 
+bindkey -e
 bindkey '^[[A' history-substring-search-up
 bindkey '^p' history-substring-search-up
 bindkey '^[[B' history-substring-search-down
 bindkey '^n' history-substring-search-down
+bindkey "^[[1;5D" backward-word
+bindkey "^[[1;5C" forward-word
+bindkey '^[[3~' delete-char
 
 setopt appendhistory
 setopt sharehistory

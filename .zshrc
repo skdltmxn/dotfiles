@@ -157,6 +157,9 @@ zstyle ':completion:*' menu no
 zstyle ':fzf-tab:complete:cd:*' fzf-preview 'eza -1 --color=always $realpath'
 zstyle ':fzf-tab:complete:__zoxide_z:*' fzf-preview 'eza -1 --color=always $realpath'
 
+# starship
+eval "$(starship init zsh)"
+
 # fzf
 eval "$(fzf --zsh)"
 
@@ -167,10 +170,6 @@ eval "$(zoxide init zsh)"
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
-
-# Oh My Posh
-OH_MY_POSH_HOME="${XDG_DATA_HOME:-${HOME}}/.config/oh-my-posh"
-eval "$(oh-my-posh init zsh --config $OH_MY_POSH_HOME/theme.json)"
 
 # Per-project configs
 setopt null_glob

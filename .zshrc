@@ -104,6 +104,7 @@ alias grst='git reset HEAD~1'
 alias gsq='(){ git rebase -i HEAD~$1 }'
 alias gsm='git submodule'
 alias gsmu='git submodule update --init --recursive'
+alias gbp="git branch -vv | grep ': gone]' | awk '{print \$1}' | xargs git branch -D"
 
 # pulumi
 alias pl='pulumi'

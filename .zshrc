@@ -87,6 +87,7 @@ if command -v kubectl &> /dev/null; then
   alias k='kubectl'
 fi
 
+alias rst='reset'
 alias awslg='aws sso login'
 alias tshlg='tsh login --proxy teleport.pubg.io:443 --auth sso'
 

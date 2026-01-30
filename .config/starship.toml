@@ -63,6 +63,9 @@ format = '[[$symbol $branch ](fg:yellow)]($style)'
 ahead = "⇡$count"
 behind = "⇣$count"
 diverged = "⇕⇡$ahead_count ⇣$behind_count"
+untracked = "?$count "
+staged = "+$count "
+modified = "!$count "
 style = "fg:yellow"
 format = '[[($all_status$ahead_behind )](fg:yellow)]($style)'
 

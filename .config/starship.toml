@@ -54,19 +54,14 @@ format = "[ $path ]($style)"
 truncation_length = 3
 truncation_symbol = "…/"
 
-[directory.substitutions]
-"Documents" = "󰈙 "
-"Downloads" = " "
-"Music" = "󰝚 "
-"Pictures" = " "
-"Developer" = "󰲋 "
-
 [git_branch]
 symbol = ""
 style = "fg:yellow"
 format = '[[$symbol $branch ](fg:yellow)]($style)'
 
 [git_status]
+ahead = "⇡$count"
+behind = "⇣$count"
 style = "fg:yellow"
 format = '[[($all_status$ahead_behind )](fg:yellow)]($style)'
 

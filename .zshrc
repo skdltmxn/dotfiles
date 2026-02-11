@@ -58,6 +58,7 @@ if command -v brew &> /dev/null; then
   alias b='brew'
   alias bu='brew upgrade'
   alias bi='brew install'
+  eval "$(brew shellenv)"
 fi
 
 # pacman

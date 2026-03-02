@@ -128,6 +128,12 @@ fi
 alias vim='nvim'
 alias nv='nvim'
 
+# claude code
+alias cl='claude'
+alias clr='claude -r'
+alias clc='claude -c'
+alias cld='claude --dangerously-skip-permissions'
+
 # history
 HISTFILE=$HOME/.zhistory
 SAVEHIST=1000

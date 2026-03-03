@@ -33,7 +33,7 @@ export LANG=en_US.UTF-8
 export EDITOR=nvim
 
 # common
-alias so='exec zsh'
+alias so='exec zsh -l'
 alias ls='eza --color=always --long --git --icons=always --no-time --no-user --no-permissions'
 alias ll='ls -a'
 alias cd='z'

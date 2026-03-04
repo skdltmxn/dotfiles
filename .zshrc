@@ -1,5 +1,3 @@
-zmodload zsh/zprof
-
 [[ -o interactive ]] || return 0
 
 # Init zinit
@@ -195,5 +193,3 @@ done
 unsetopt null_glob
 
 export PATH="$HOME/.local/bin:$HOME/.pulumi/bin:$HOME/go/bin:$HOME/bin:/sbin:/usr/sbin:/usr/local/bin:/usr/local/go/bin:$PATH"
-
-zprof

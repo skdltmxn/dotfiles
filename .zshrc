@@ -1,3 +1,5 @@
+zmodload zsh/zprof
+
 [[ -o interactive ]] || return 0
 
 # Init zinit
@@ -24,7 +26,12 @@ zinit snippet OMZP::kubectl
 zinit snippet OMZP::kubectx
 zinit snippet OMZP::command-not-found
 
-autoload -Uz compinit && compinit
+autoload -Uz compinit
+if [[ -n ${ZDOTDIR:-$HOME}/.zcompdump(#qN.mh+24) ]]; then
+compinit
+else
+compinit -C
+fi
 
 zinit cdreplay -q
 
@@ -175,10 +182,8 @@ eval "$(fzf --zsh)"
 # Zoxide
 eval "$(zoxide init zsh)"
 
-# nvm
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
+# fnm
+eval "$(fnm env --use-on-cd --shell zsh)"
 
 # Per-project configs
 setopt null_glob
@@ -190,3 +195,5 @@ done
 unsetopt null_glob
 
 export PATH="$HOME/.local/bin:$HOME/.pulumi/bin:$HOME/go/bin:$HOME/bin:/sbin:/usr/sbin:/usr/local/bin:/usr/local/go/bin:$PATH"
+
+zprof

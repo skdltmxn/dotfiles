@@ -53,17 +53,17 @@ alias .3='cd ../../..'
 alias .4='cd ../../../..'
 alias .5='cd ../../../../..'
 
-# brew (linux)
+# brew
 if [[ "$OSTYPE" == "linux-gnu" ]]; then
   eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+elif command -v brew &> /dev/null; then
+  eval "$(brew shellenv)"
 fi
 
-# if brew is installed, set up aliases
 if command -v brew &> /dev/null; then
   alias b='brew'
   alias bu='brew upgrade'
   alias bi='brew install'
-  eval "$(brew shellenv)"
 fi
 
 # pacman

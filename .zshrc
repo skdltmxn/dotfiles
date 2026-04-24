@@ -183,6 +183,13 @@ eval "$(zoxide init zsh)"
 # fnm
 eval "$(fnm env --use-on-cd --shell zsh)"
 
+# bun
+if [[ -d "$HOME/.bun" ]]; then
+  export BUN_INSTALL="$HOME/.bun"
+  export PATH="$BUN_INSTALL/bin:$PATH"
+  [[ -s "$BUN_INSTALL/_bun" ]] && source "$BUN_INSTALL/_bun"
+fi
+
 # Per-project configs
 setopt null_glob
 for file in $HOME/.config/projects/*.zsh; do

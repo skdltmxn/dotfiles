@@ -8,7 +8,9 @@ return {
             require("nvim-treesitter").install({
                 "bash",
                 "javascript",
+                "jsx",
                 "typescript",
+                "tsx",
                 "go",
                 "lua",
                 "rust",

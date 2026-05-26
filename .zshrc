@@ -122,6 +122,9 @@ alias pstt='pulumi state'
 alias ppv='pulumi preview --suppress-outputs'
 alias ppvd='pulumi preview --diff --suppress-outputs'
 
+# terraform
+alias tf='terraform'
+
 # pnpm
 if command -v pnpm &> /dev/null; then
   alias p='pnpm'

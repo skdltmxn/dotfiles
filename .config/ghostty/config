@@ -1,6 +1,0 @@
-theme = catppuccin-frappe
-
-shell-integration = zsh
-
-font-family = "MesloLGS NF"
-font-style = "bold"

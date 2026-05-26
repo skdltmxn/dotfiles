@@ -1,0 +1,21 @@
+theme = Catppuccin Frappe
+
+shell-integration = zsh
+
+font-family = "MesloLGSDZ Nerd Font"
+font-family = "D2Coding"
+font-style = "bold"
+font-size = 15
+
+background-opacity = 0.95
+background-blur-radius = 15
+
+cursor-style = block
+cursor-style-blink = false
+
+scrollbar = system
+
+notify-on-command-finish = unfocused
+notify-on-command-finish-after = 10s
+
+copy-on-select = clipboard

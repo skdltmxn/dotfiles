@@ -7,14 +7,17 @@ return {
         config = function()
             require("nvim-treesitter").install({
                 "bash",
+                "dockerfile",
                 "javascript",
                 "jsx",
+                "json",
                 "typescript",
                 "tsx",
                 "go",
                 "lua",
                 "rust",
                 "svelte",
+                "yaml",
             })
 
             vim.api.nvim_create_autocmd("FileType", {

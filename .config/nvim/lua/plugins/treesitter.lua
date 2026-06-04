@@ -8,6 +8,7 @@ return {
             require("nvim-treesitter").install({
                 "bash",
                 "dockerfile",
+                "html",
                 "javascript",
                 "jsx",
                 "json",

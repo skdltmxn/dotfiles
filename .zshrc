@@ -142,6 +142,11 @@ alias clr='claude -r'
 alias clc='claude -c'
 alias cld='claude --dangerously-skip-permissions'
 
+# codex
+alias cx='codex -s danger-full-access'
+alias cxd='codex --dangerously-bypass-approvals-and-sandbox'
+alias cxr='codex -s danger-full-access resume'
+
 # history
 HISTFILE=$HOME/.zhistory
 SAVEHIST=1000

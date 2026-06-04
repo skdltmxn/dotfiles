@@ -123,13 +123,15 @@ alias ppv='pulumi preview --suppress-outputs'
 alias ppvd='pulumi preview --diff --suppress-outputs'
 
 # terraform
-alias tf='terraform'
+if command -v terraform &> /dev/null; then
+  alias tf='terraform'
+fi
 
 # pnpm
 if command -v pnpm &> /dev/null; then
   alias p='pnpm'
+  alias pi='pnpm install'
   alias pd='pnpm dev'
-  alias pr='pnpm run'
 fi
 
 # editor

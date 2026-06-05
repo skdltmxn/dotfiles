@@ -10,10 +10,11 @@ return {
 
     {
         "mason-org/mason-lspconfig.nvim",
-        event = "VeryLazy",
+        event = { "BufReadPre", "BufNewFile" },
         dependencies = {
             "mason-org/mason.nvim",
             "WhoIsSethDaniel/mason-tool-installer.nvim",
+            "neovim/nvim-lspconfig",
         },
         config = function()
             require("mason-lspconfig").setup({

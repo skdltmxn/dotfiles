@@ -16,6 +16,7 @@ return {
                 "tsx",
                 "go",
                 "lua",
+                "make",
                 "rust",
                 "svelte",
                 "yaml",

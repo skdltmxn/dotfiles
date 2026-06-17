@@ -25,11 +25,14 @@ zinit snippet OMZP::kubectx
 zinit snippet OMZP::command-not-found
 
 autoload -Uz compinit
-if [[ -n ${ZDOTDIR:-$HOME}/.zcompdump(#qN.mh+24) ]]; then
-compinit
-else
-compinit -C
-fi
+() {
+  setopt local_options extended_glob
+  if [[ -n ${ZDOTDIR:-$HOME}/.zcompdump(#qN.mh+24) ]]; then
+    compinit
+  else
+    compinit -C
+  fi
+}
 
 zinit cdreplay -q
 

@@ -17,6 +17,7 @@ return {
                 "go",
                 "lua",
                 "make",
+                "python",
                 "rust",
                 "svelte",
                 "yaml",

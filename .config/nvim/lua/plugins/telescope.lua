@@ -15,6 +15,7 @@ return {
 			telescope.setup({
 				defaults = {
 					path_display = { "truncate" },
+					file_ignore_patterns = { "%.git/" },
 					mappings = {
 						i = {
 							["<esc>"] = actions.close,
@@ -24,9 +25,12 @@ return {
 					},
 				},
 				pickers = {
+					find_files = {
+						hidden = true,
+					},
 					live_grep = {
 						additional_args = function(_)
-							return { "--no-ignore" }
+							return { "--hidden" }
 						end,
 					},
 				},

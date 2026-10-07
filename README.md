@@ -9,7 +9,7 @@ Personal config for zsh, tmux, Neovim, and terminal emulators, managed with [GNU
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
 # Required tools
-brew install stow neovim tmux starship fzf zoxide fnm eza bat ripgrep fd lazygit go python golangci-lint
+brew install stow neovim tmux starship fzf zoxide fnm eza bat ripgrep fd lazygit go python golangci-lint tree-sitter-cli
 brew install --cask font-meslo-lg-nerd-font font-d2coding         # Nerd Font for icons
 xcode-select --install                                            # C compiler + make (Treesitter parsers)
 fnm install --lts                                                 # Node runtime for LSP servers & Copilot

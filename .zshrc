@@ -99,7 +99,6 @@ fi
 
 alias rst='reset'
 alias awslg='aws sso login'
-alias tshlg='tsh login --proxy teleport.pubg.io:443 --auth sso'
 
 # git
 alias git='LANG=en_US git'

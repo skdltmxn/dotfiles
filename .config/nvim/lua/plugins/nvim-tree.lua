@@ -10,10 +10,17 @@ return {
 
 			tree.setup({
 				view = {
-					width = 35,
+					width = {
+						min = 35,
+						max = "40%",
+						padding = 2,
+					},
+					preserve_window_proportions = true,
 					relativenumber = true,
 				},
 				renderer = {
+					full_name = true,
+					indent_width = 1,
 					indent_markers = {
 						enable = true,
 					},

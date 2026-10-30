@@ -64,6 +64,9 @@ elif command -v brew &> /dev/null; then
   eval "$(brew shellenv)"
 fi
 
+# fnm: must run before `command -v` guards below, since pnpm lives in fnm's node
+eval "$(fnm env --use-on-cd --shell zsh)"
+
 if command -v brew &> /dev/null; then
   alias b='brew'
   alias bu='brew upgrade'
@@ -192,9 +195,6 @@ eval "$(fzf --zsh)"
 
 # Zoxide
 eval "$(zoxide init zsh)"
-
-# fnm
-eval "$(fnm env --use-on-cd --shell zsh)"
 
 # bun
 if [[ -d "$HOME/.bun" ]]; then
